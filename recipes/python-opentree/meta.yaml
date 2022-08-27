@@ -10,21 +10,21 @@
    sha256: a765ae37cd72c232c292506c170656aaaa4be81e6de6ccd4845eec01bfe45e4d
 
  build:
+   number: 0
    noarch: python
    script: {{ PYTHON }} -m pip install . -vv
-   number: 0
 
  requirements:
-   build:
    host:
      - python
      - pip
+
    run:
      - python
+     - setuptools
      - requests
      - DendroPy
      - m2r
-     - setuptools
 
  test:
    imports:
@@ -53,3 +53,5 @@
    recipe-maintainers:
      - snacktavish
      - harmsm
+  identifiers:
+     - doi:10.1093/sysbio/syab033
